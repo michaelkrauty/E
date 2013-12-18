@@ -7,7 +7,8 @@ import me.michaelkrauty.E.Main;
 public class PlayerChat extends Main{
 	
 	public static boolean playerchat(Player player){
-		return playerfile.getBoolean(player.getName() + ".muted");
+		boolean bool = playerfile.getBoolean(player.getName() + ".muted");
+		return bool;
 	}
 				
 }

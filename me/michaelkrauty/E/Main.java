@@ -23,9 +23,9 @@ public class Main extends JavaPlugin implements Listener{
 	
 	public static SettingsManager conf = SettingsManager.getInstance();
 	public static FileConfiguration lang = conf.getLang();
-	public static FileConfiguration config = conf.getConfig();
 	public static FileConfiguration playerfile = conf.getPlayerFile();
 	public static FileConfiguration warps = conf.getPlayerFile();
+	public static FileConfiguration spawn = conf.getSpawn();
 	public static boolean console = false;
 	
 	public static Logger log = Logger.getLogger("MC");
@@ -33,8 +33,11 @@ public class Main extends JavaPlugin implements Listener{
 	public static Plugin plugin;
 	
 	public void onEnable(){
-		conf.setup(plugin);
+		conf.setup(this);
 		getServer().getPluginManager().registerEvents(this, this);
+		getConfig().options().copyDefaults(true);
+		saveConfig();
+		reloadConfig();
 	}
 	
 	@EventHandler
@@ -69,11 +72,6 @@ public class Main extends JavaPlugin implements Listener{
 		float pitch = player.getLocation().getPitch();
 		float yaw = player.getLocation().getYaw();
 		Location loc = new Location(player.getWorld(), x, y, z, pitch, yaw);
-		
-		if(commandLabel.equalsIgnoreCase("su")){
-			Su.su(console, player, args.length, args[0]);
-		}
-		
 		
 		if(commandLabel.equalsIgnoreCase("tp")){
 			Tp.tp(console, args.length, player, args[0]);
@@ -125,6 +123,10 @@ public class Main extends JavaPlugin implements Listener{
 		}
 		if(commandLabel.equalsIgnoreCase("delhome")){
 			Delhome.delhome(console, player, args.length, args[0], args[1]);
+			return true;
+		}
+		if(commandLabel.equalsIgnoreCase("setspawn")){
+			Setspawn.setspawn(console, player, args.length, loc);
 			return true;
 		}
 		

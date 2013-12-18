@@ -11,6 +11,8 @@ public class Ban extends Main{
 			return;
 		}
 		player2.setBanned(true);
+		player1.sendMessage(lang.getString("Player1Ban"));
+		return;
 	}
 	
 }

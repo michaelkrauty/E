@@ -18,7 +18,6 @@ public class SettingsManager extends JavaPlugin{
 	public static SettingsManager getInstance(){
 		return instance;
 	}
-	
 	Plugin p;
 	FileConfiguration lang;
 	File langfile;
@@ -26,33 +25,42 @@ public class SettingsManager extends JavaPlugin{
 	File playerfile;
 	FileConfiguration warps;
 	File warpsfile;
-	FileConfiguration sudoers; 
-	File sudoersfile;
-	
+	FileConfiguration spawn;
+	File spawnfile;
 	public void setup(Plugin p){
 		lang = p.getConfig();
-		lang.options().copyDefaults(true);
-		langfile = new File(p.getDataFolder(), "lang.yml");
 		player = p.getConfig();
-		player.options().copyDefaults(true);
-		playerfile = new File(p.getDataFolder(), "players.yml");
 		warps = p.getConfig();
-		warps.options().copyDefaults(true);
+		spawn = p.getConfig();
+		langfile = new File(p.getDataFolder(), "lang.yml");
+		playerfile = new File(p.getDataFolder(), "players.yml");
 		warpsfile = new File(p.getDataFolder(), "warps.yml");
+		spawnfile = new File(p.getDataFolder(), "spawns.yml");
+		lang.options().copyDefaults(true);
+		player.options().copyDefaults(true);
+		warps.options().copyDefaults(true);
+		spawn.options().copyDefaults(true);
+		saveLang();
+		reloadLang();
+		savePlayerFile();
+		reloadPlayerFile();
+		saveWarps();
+		reloadWarps();
+		saveSpawn();
+		reloadSpawn();
 	}
-	
 	public FileConfiguration getLang(){
 		return lang;
 	}
-	
 	public FileConfiguration getPlayerFile(){
 		return player;
 	}
-	
 	public FileConfiguration getWarps(){
 		return warps;
 	}
-	
+	public FileConfiguration getSpawn(){
+		return spawn;
+	}
 	public void saveLang(){
 		try{
 			lang.save(langfile);
@@ -60,7 +68,6 @@ public class SettingsManager extends JavaPlugin{
 			getServer().getLogger().severe("Could not save lang.yml!");
 		}
 	}
-	
 	public void savePlayerFile(){
 		try{
 			player.save(playerfile);
@@ -68,7 +75,6 @@ public class SettingsManager extends JavaPlugin{
 			getServer().getLogger().severe("Could not save players.yml!");
 		}
 	}
-	
 	public void saveWarps(){
 		try{
 			warps.save(warpsfile);
@@ -76,20 +82,26 @@ public class SettingsManager extends JavaPlugin{
 			getServer().getLogger().severe("Could not save warps.yml!");
 		}
 	}
-	
+	public void saveSpawn(){
+		try{
+			spawn.save(spawnfile);
+		}catch(IOException e){
+			getServer().getLogger().severe("Could not save spawns.yml!");
+		}
+	}
 	public PluginDescriptionFile getDesc(){
 		return p.getDescription();
 	}
-	
 	public void reloadLang(){
 		lang = YamlConfiguration.loadConfiguration(langfile);
 	}
-	
 	public void reloadPlayerFile(){
 		player = YamlConfiguration.loadConfiguration(playerfile);
 	}
-	
 	public void reloadWarps(){
 		warps = YamlConfiguration.loadConfiguration(warpsfile);
+	}
+	public void reloadSpawn(){
+		spawn = YamlConfiguration.loadConfiguration(spawnfile);
 	}
 }

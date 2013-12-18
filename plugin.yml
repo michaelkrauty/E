@@ -2,121 +2,121 @@ name: E
 version: 1.0
 main: me.michaelkrauty.E.Main
 author: michaelkrauty
-#commands:
-#  back:
-#    description: back
-#    usage: /<command>
-#  ban:
-#    description: ban
-#    usage: /<command>
-#  delhome:
-#    description: delhome
-#    usage: /<command>
-#  deljail:
-#    description: deljail
-#    usage: /<command>
-#  delwarp:
-#    description: delwarp
-#    usage: /<command>
-#  fly:
-#    description: fly
-#    usage: /<command>
-#  getpos:
-#    description: getpos
-#    usage: /<command>
-#  home:
-#    description: home
-#    usage: /<command>
-#  ip:
-#    description: ip
-#    usage: /<command>
-#  item:
-#    description: item
-#    usage: /<command>
-#  jail:
-#    description: jail
-#    usage: /<command>
-#  kick:
-#    description: kick
-#    usage: /<command>
-#  kill:
-#    description: kill
-#    usage: /<command>
-#  message:
-#    description: message
-#    usage: /<command>
-#  motd:
-#    description: motd
-#    usage: /<command>
-#  mute:
-#    description: mute
-#    usage: /<command>
-#  reload:
-#    description: reload
-#    usage: /<command>
-#  seen:
-#    description: seen
-#    usage: /<command>
-#  sethome:
-#    description: sethome
-#    usage: /<command>
-#  setjail:
-#    description: setjail
-#    usage: /<command>
-#  setmotd:
-#    description: setmotd
-#    usage: /<command>
-#  setspawn:
-#    description: setspawn
-#    usage: /<command>
-#  setwarp:
-#    description: setwarp
-#    usage: /<command>
-#  slap:
-#    description: slap
-#    usage: /<command>
-#  spawn:
-#    description: spawn
-#    usage: /<command>
-#  spawnmob:
-#    description: spawnmob
-#    usage: /<command>
-#  su:
-#    description: su
-#    usage: /<command>
-#  suicide:
-#    description: suicide
-#    usage: /<command>
-#  tempban:
-#    description: tempban
-#    usage: /<command>
-#  tp:
-#    description: tp
-#    usage: /<command>
-#  tpall:
-#    description: tpall
-#    usage: /<command>
-#  tphere:
-#    description: tphere
-#    usage: /<command>
-#  tppos:
-#    description: tppos
-#    usage: /<command>
-#  unban:
-#    description: unban
-#    usage: /<command>
-#  unjail:
-#    description: unjail
-#    usage: /<command>
-#  unmute:
-#    description: unmute
-#    usage: /<command>
-#  vanish:
-#    description: vanish
-#    usage: /<command>
-#  warp:
-#    description: warp
-#    usage: /<command>
-#  whois:
-#    description: whois
-#    usage: /<command>
+commands:
+  back:
+    description: back
+    usage: /<command>
+  ban:
+    description: ban
+    usage: /<command>
+  delhome:
+    description: delhome
+    usage: /<command>
+  deljail:
+    description: deljail
+    usage: /<command>
+  delwarp:
+    description: delwarp
+    usage: /<command>
+  fly:
+    description: fly
+    usage: /<command>
+  getpos:
+    description: getpos
+    usage: /<command>
+  home:
+    description: home
+    usage: /<command>
+  ip:
+    description: ip
+    usage: /<command>
+  item:
+    description: item
+    usage: /<command>
+  jail:
+    description: jail
+    usage: /<command>
+  kick:
+    description: kick
+    usage: /<command>
+  kill:
+    description: kill
+    usage: /<command>
+  message:
+    description: message
+    usage: /<command>
+  motd:
+    description: motd
+    usage: /<command>
+  mute:
+    description: mute
+    usage: /<command>
+  reload:
+    description: reload
+    usage: /<command>
+  seen:
+    description: seen
+    usage: /<command>
+  sethome:
+    description: sethome
+    usage: /<command>
+  setjail:
+    description: setjail
+    usage: /<command>
+  setmotd:
+    description: setmotd
+    usage: /<command>
+  setspawn:
+    description: setspawn
+    usage: /<command>
+  setwarp:
+    description: setwarp
+    usage: /<command>
+  slap:
+    description: slap
+    usage: /<command>
+  spawn:
+    description: spawn
+    usage: /<command>
+  spawnmob:
+    description: spawnmob
+    usage: /<command>
+  su:
+    description: su
+    usage: /<command>
+  suicide:
+    description: suicide
+    usage: /<command>
+  tempban:
+    description: tempban
+    usage: /<command>
+  tp:
+    description: tp
+    usage: /<command>
+  tpall:
+    description: tpall
+    usage: /<command>
+  tphere:
+    description: tphere
+    usage: /<command>
+  tppos:
+    description: tppos
+    usage: /<command>
+  unban:
+    description: unban
+    usage: /<command>
+  unjail:
+    description: unjail
+    usage: /<command>
+  unmute:
+    description: unmute
+    usage: /<command>
+  vanish:
+    description: vanish
+    usage: /<command>
+  warp:
+    description: warp
+    usage: /<command>
+  whois:
+    description: whois
+    usage: /<command>
